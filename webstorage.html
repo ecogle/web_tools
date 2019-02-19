@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Web Storage Test
+		</title>
+	</head>
+
+	<body>
+	<div>
+			<p id="test">
+			</p>
+		</div>
+		<script type="text/javascript">
+		
+			var person = {
+			Name: 'John Doe',
+			Age: 24,
+			Gender: 'Male',
+			Nationality: 'Nigerian'
+			}
+			localStorage.setItem('person', JSON.stringify(person));
+			var obj = JSON.parse(localStorage.getItem('person'));
+			document.getElementById("test").innerHTML = JSON.stringify(obj);
+            
+            window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || 
+            window.msIndexedDB;
+
+            window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || 
+            window.msIDBTransaction;
+            window.IDBKeyRange = window.IDBKeyRange || 
+            window.webkitIDBKeyRange || window.msIDBKeyRange
+ 
+            if (!window.indexedDB) {
+               window.alert("Your browser doesn't support a stable version of IndexedDB.")
+            }
+			
+		</script>
+		<div>
+			<p id="test">
+			</p>
+		</div>
+        
+        <mfrac>1 4</mfrac>
+	</body>
+</html>

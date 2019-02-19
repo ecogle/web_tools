@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Determine Character Length
+        </title>
+        <script type="text/javascript">
+            function countChars(){
+                var txt = document.getElementById('input_char').value;
+                
+                var result = txt.length;
+                
+                document.getElementById("outputs").innerHTML = result;
+                
+            }
+            
+            function clearText(){
+                document.getElementById("input_char").value="";
+                document.getElementById('outputs').innerHTML = "";
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="inputs" style="padding: 5px">
+            <p>Character Count</p> <textarea type="text" id="input_char" name="input_char" style="width:350px;height:200px;" oninput="countChars()"></textarea> <div style="margin-left: 300px;"><button name="Reset" onclick="clearText()">Reset</button></div>
+        </div>
+        
+        <p id="outputs">
+            
+        </p>    
+        
+    </body>
+</html>
